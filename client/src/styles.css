@@ -1,0 +1,42 @@
+:root { --bg:#f5f6f8; --card:#fff; --ink:#1c2430; --muted:#6b7686; --line:#e3e7ee; --brand:#2f5bea; --late:#c62828; --wait:#b26a00; --ok:#2e7d32; }
+* { box-sizing: border-box; }
+body { margin:0; font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+a { color:var(--brand); text-decoration:none; } a:hover { text-decoration:underline; }
+h1 { font-size:22px; margin:0 0 8px; } h2 { font-size:18px; margin:0 0 4px; }
+.shell main { max-width:1100px; margin:20px auto; padding:0 16px; }
+.topbar { display:flex; align-items:center; gap:20px; background:#16223a; color:#fff; padding:10px 20px; }
+.topbar a { color:#c9d4ee; margin-right:14px; } .topbar a.active { color:#fff; font-weight:600; }
+.brand { font-weight:700; letter-spacing:.3px; } .who { color:#c9d4ee; font-size:13px; }
+.spacer { flex:1; } .row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:14px; }
+.card.narrow { max-width:420px; margin:60px auto; } .card.narrow.wide { max-width:720px; margin:30px auto; }
+.muted { color:var(--muted); } .small { font-size:13px; } .center { text-align:center; margin-top:60px; }
+.empty { padding:30px; text-align:center; }
+label { display:block; margin:10px 0; font-size:13px; color:var(--muted); }
+label.inline { display:flex; gap:6px; align-items:center; margin:0; }
+input, select, textarea { width:100%; margin-top:4px; padding:8px 10px; border:1px solid #cfd6e2; border-radius:6px; font:inherit; color:var(--ink); background:#fff; }
+input[type=checkbox] { width:auto; margin:0; }
+.actions select { width:auto; margin:0; } .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+button { background:var(--brand); color:#fff; border:0; border-radius:6px; padding:8px 14px; font:inherit; cursor:pointer; }
+button:disabled { opacity:.5; cursor:not-allowed; }
+button.ghost { background:#fff; color:var(--ink); border:1px solid #cfd6e2; } button.ok { background:var(--ok); }
+button.link { background:none; color:var(--brand); padding:0; }
+.error { color:var(--late); } .notice { background:#fff8e1; border:1px solid #ffe08a; padding:6px 10px; border-radius:6px; font-size:13px; }
+table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; margin-top:12px; }
+th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { font-size:12px; text-transform:uppercase; letter-spacing:.4px; color:var(--muted); background:#fafbfc; }
+tr.row-late { background:#fff4f4; } tr.row-wait { background:#fffaf0; }
+.badge { display:inline-block; padding:1px 8px; border-radius:99px; font-size:12px; font-weight:600; background:#eef1f6; color:#445; margin-right:4px; }
+.badge.late { background:var(--late); color:#fff; } .badge.waiting { background:#ffe8b3; color:var(--wait); }
+.badge.pr-urgent { background:#ffe1e1; color:var(--late); } .badge.pr-medium { background:#e3ecff; color:#2748b8; } .badge.pr-low { background:#eaf5ea; color:var(--ok); }
+.badge.note { background:#ffe08a; color:#6b4b00; }
+.over { color:var(--late); font-weight:600; } .sla { background:#f3f6fd; padding:6px 10px; border-radius:6px; }
+.tabs { display:flex; gap:4px; margin-bottom:8px; }
+.tab { background:#fff; color:var(--ink); border:1px solid #cfd6e2; } .tab.on { background:var(--brand); color:#fff; border-color:var(--brand); } .tab.note-tab { background:#b8860b; border-color:#b8860b; }
+.thread { display:flex; flex-direction:column; gap:10px; margin:14px 0; }
+.msg { border:1px solid var(--line); border-radius:10px; padding:10px 14px; background:#fff; max-width:85%; }
+.msg.customer { align-self:flex-start; } .msg.agent { align-self:flex-end; background:#eef3ff; border-color:#cddafc; }
+.msg.note { align-self:stretch; max-width:100%; background:#fff8e1; border:1px dashed #d4a72c; }
+.msg .meta { font-size:12px; color:var(--muted); margin-bottom:4px; } .msg .body { white-space:pre-wrap; }
+textarea.note-area { background:#fffbea; border-color:#d4a72c; }
+.log td { font-size:13px; } code { font-size:12px; word-break:break-all; }
